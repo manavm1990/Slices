@@ -29,6 +29,7 @@ module.exports = {
       },
     },
     "gatsby-plugin-styled-components",
+    "gatsby-plugin-eslint",
     {
       resolve: "gatsby-source-sanity",
       options: {
