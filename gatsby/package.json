@@ -11,14 +11,18 @@
     "gatsby-plugin-offline": "^3.2.30",
     "gatsby-plugin-react-helmet": "^3.3.12",
     "gatsby-plugin-sharp": "^2.6.38",
+    "gatsby-plugin-styled-components": "^3.3.14",
     "gatsby-source-filesystem": "^2.3.32",
+    "gatsby-source-sanity": "^6.0.4",
     "gatsby-transformer-sharp": "^2.5.16",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "styled-components": "^5.2.1"
   },
   "devDependencies": {
+    "babel-plugin-styled-components": "^1.11.1",
     "husky": ">=4",
     "lint-staged": ">=10",
     "prettier": "2.1.2",
@@ -56,5 +60,8 @@
   "lint-staged": {
     "*.{js,jsx,ts,tsx,json,md}": "prettier --write",
     "*.css": "stylelint --fix"
+  },
+  "resolutions": {
+    "styled-components": "^5"
   }
 }
