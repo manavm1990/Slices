@@ -17,6 +17,7 @@
     "gatsby-source-sanity": "^6.0.4",
     "gatsby-transformer-sharp": "^2.5.16",
     "isomorphic-fetch": "^3.0.0",
+    "netlify-cli": "^2.67.2",
     "netlify-lambda": "^2.0.1",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
