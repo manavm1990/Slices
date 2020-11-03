@@ -1,8 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Default Starter",
-    description:
-      "Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.",
+    title: "Slick's Slices",
+    description: "Slick's Slices",
     author: "@gatsbyjs",
   },
   plugins: [
@@ -11,7 +10,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "${__dirname}/src/images",
+        path: `${__dirname}/src/images`,
       },
     },
     "gatsby-transformer-sharp",
@@ -30,18 +29,20 @@ module.exports = {
     },
     "gatsby-plugin-styled-components",
     "gatsby-plugin-eslint",
-    {
-      resolve: "gatsby-source-sanity",
-      options: {
-        projectId: "<yourProjectId>",
-        dataset: "<yourDatasetName>",
-        // To enable preview of drafts, copy .env-example into .env,
-        // and add a token with read permissions
-        token: process.env.SANITY_TOKEN,
-        watchMode: true,
-        overlayDrafts: true,
-      },
-    },
+
+    // TODO: Reactivate when ready
+    // {
+    //   resolve: "gatsby-source-sanity",
+    //   options: {
+    //     projectId: "z6r3yy7j",
+    //     dataset: "<yourDatasetName>",
+    //     // To enable preview of drafts, copy .env-example into .env,
+    //     // and add a token with read permissions
+    //     token: process.env.SANITY_TOKEN,
+    //     watchMode: true,
+    //     overlayDrafts: true,
+    //   },
+    // },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // 'gatsby-plugin-offline',
