@@ -1,7 +1,6 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/browser-apis/
- */
+const React = require("react")
+const Layout = require("components/Layout").default
 
-// You can delete this file if you're not using it
+const wrapper = ({ element }) => <Layout>{element}</Layout>
+
+exports.wrapPageElement = wrapper
