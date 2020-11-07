@@ -2,6 +2,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import Nav from "components/Nav"
 import Footer from "./Footer"
+import "normalize.css"
 
 const Layout = ({ children }) => (
   <>
