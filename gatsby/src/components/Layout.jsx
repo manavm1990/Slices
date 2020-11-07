@@ -1,6 +1,6 @@
 import PropTypes from "prop-types"
 import React from "react"
-import Nav from "components/Nav"
+import Nav from "./Nav"
 import GlobalStyle from "./GlobalStyles"
 import Footer from "./Footer"
 import "normalize.css"
