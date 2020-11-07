@@ -4,7 +4,7 @@
     "import/no-unresolved": [
       1,
       {
-        "ignore": ["components", "images", "styles"]
+        "ignore": ["assets", "components", "styles"]
       }
     ],
     "no-unused-vars": [

@@ -2,8 +2,8 @@
 import { createGlobalStyle } from "styled-components"
 
 // Gatsby allows for these types of special imports - NOT valid JS!
-import bg from "images/bg.svg"
-import stripes from "images/stripes.svg"
+import bg from "assets/bg.svg"
+import stripes from "assets/stripes.svg"
 
 const GlobalStyle = createGlobalStyle`
   :root {
