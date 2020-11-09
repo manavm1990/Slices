@@ -6,7 +6,7 @@ export default styled.nav`
     align-items: center;
     display: grid;
     grid-gap: 2rem;
-    grid-template-columns: repeat(2, 1fr) auto repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
   li {
     --rot: -2deg;

@@ -1,14 +1,14 @@
 import PropTypes from "prop-types"
 import React from "react"
-import Nav from "./Nav"
 import GlobalStyle from "./GlobalStyles"
+import Header from "./Header"
 import Footer from "./Footer"
 import "normalize.css"
 
 const Layout = ({ children }) => (
   <>
     <GlobalStyle />
-    <Nav />
+    <Header />
     {children}
     <Footer />
   </>

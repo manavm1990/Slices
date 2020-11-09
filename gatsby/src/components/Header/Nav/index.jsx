@@ -15,9 +15,11 @@ const Nav = () => (
           </span>
         </Link>
       </li>
-      <li>
-        <Link to="/">LOGO</Link>
-      </li>
+      {/* <li>
+        <Link to="/">
+          <Logo />
+        </Link>
+      </li> */}
       <li>
         <Link to="/slicemasters">SliceMasters</Link>
       </li>
