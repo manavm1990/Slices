@@ -4,7 +4,7 @@ import Style from "./style"
 
 const Nav = () => (
   <Style>
-    <ul>
+    <ul className="center">
       <li>
         <Link to="/">Home</Link>
       </li>
