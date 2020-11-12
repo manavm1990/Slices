@@ -3,7 +3,7 @@ import Style from "./style"
 
 const Logo = () => (
   <Style className="logo">
-    <div className="inner">
+    <div className="inner center">
       <span className="est">EST 1994</span>
       <h1>
         <span className="slicks">
