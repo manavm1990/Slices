@@ -1,16 +1,22 @@
 import PropTypes from "prop-types"
 import React from "react"
-import GlobalStyle from "./GlobalStyles"
+import "normalize.css"
+import GlobalStyles from "./GlobalStyles"
+import SiteBorderStyles from "./SiteBorderStyles"
+import ContentStyles from "./ContentStyles"
 import Header from "./Header"
 import Footer from "./Footer"
-import "normalize.css"
 
 const Layout = ({ children }) => (
   <>
-    <GlobalStyle />
-    <Header />
-    {children}
-    <Footer />
+    <GlobalStyles />
+    <SiteBorderStyles>
+      <ContentStyles>
+        <Header />
+        {children}
+        <Footer />
+      </ContentStyles>
+    </SiteBorderStyles>
   </>
 )
 

@@ -27,6 +27,9 @@ export default styled.nav`
   a {
     font-size: 1.1em;
     text-decoration: none;
+    &[aria-current="page"] {
+      color: var(--color-primary);
+    }
   }
   @media (min-width: 1024px) {
     li:focus,
