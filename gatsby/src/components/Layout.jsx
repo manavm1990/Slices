@@ -1,9 +1,9 @@
 import PropTypes from "prop-types"
 import React from "react"
 import "normalize.css"
-import GlobalStyles from "./GlobalStyles"
-import SiteBorderStyles from "./SiteBorderStyles"
-import ContentStyles from "./ContentStyles"
+import GlobalStyles from "./styles/GlobalStyles"
+import SiteBorderStyles from "./styles/SiteBorderStyles"
+import ContentStyles from "./styles/ContentStyles"
 import Header from "./Header"
 import Footer from "./Footer"
 
