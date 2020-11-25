@@ -35,17 +35,21 @@ export default {
       topping2: "toppings.2.name",
       topping3: "toppings.3.name",
     },
-    prepare: ({ title, media, ...toppings }) => {
-      const subtitle = Object.values(toppings)
-
+    prepare: ({ title, media, ...toppingNames }) => {
+      const subtitle = Object.values(toppingNames)
         // Filter out any 'undefined' toppings 🎩
+        .slice(0, 3)
         .filter(Boolean)
         .join(", ");
 
+      const annotatedSubTitle =
+        subtitle + (toppingNames.topping3 ? ", ..." : "");
+
       return {
+        // ⚠️ These 🔑s are specified by Sanity (we don't rename them! 🙅🏽‍♂️)
         title,
         media,
-        subtitle,
+        subtitle: annotatedSubTitle,
       };
     },
   },
