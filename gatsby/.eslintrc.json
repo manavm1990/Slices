@@ -7,6 +7,12 @@
         "ignore": ["assets", "components"]
       }
     ],
+    "no-underscore-dangle": [
+      "warn",
+      {
+        "allowAfterThis": true
+      }
+    ],
     "no-unused-vars": [
       "warn",
       {
