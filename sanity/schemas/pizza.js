@@ -1,4 +1,5 @@
 import { MdLocalPizza as pizza } from "react-icons/md";
+import { Input as PriceInput } from "../components";
 import lib from "../lib";
 
 export default {
@@ -12,11 +13,9 @@ export default {
       name: "price",
       title: "Price",
       type: "number",
-      description: "Price of the 🍕 in cents",
-
       // https://www.sanity.io/docs/validation
       validation: (Rule) => Rule.min(1000),
-      // TODO: Add custom input component
+      inputComponent: PriceInput,
     },
     {
       name: "toppings",
