@@ -1,3 +1,5 @@
+require("dotenv").config()
+
 module.exports = {
   siteMetadata: {
     title: "Slick's Slices",
@@ -16,19 +18,16 @@ module.exports = {
     },
     "gatsby-plugin-styled-components",
     "gatsby-plugin-eslint",
-
-    // TODO: Reactivate when ready
-    // {
-    //   resolve: "gatsby-source-sanity",
-    //   options: {
-    //     projectId: "z6r3yy7j",
-    //     dataset: "<yourDatasetName>",
-    //     // To enable preview of drafts, copy .env-example into .env,
-    //     // and add a token with read permissions
-    //     token: process.env.SANITY_TOKEN,
-    //     watchMode: true,
-    //     overlayDrafts: true,
-    //   },
-    // },
+    {
+      resolve: "gatsby-source-sanity",
+      options: {
+        projectId: "z6r3yy7j",
+        dataset: "production",
+        // To enable preview of drafts, copy .env-example into .env,
+        // and add a token with read permissions
+        token: process.env.SANITY_TOKEN,
+        watchMode: true,
+      },
+    },
   ],
 }
