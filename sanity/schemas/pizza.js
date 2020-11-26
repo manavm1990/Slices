@@ -13,6 +13,7 @@ export default {
       name: "price",
       title: "Price",
       type: "number",
+      description: "Cents❗",
       // https://www.sanity.io/docs/validation
       validation: (Rule) => Rule.min(1000),
       inputComponent: PriceInput,

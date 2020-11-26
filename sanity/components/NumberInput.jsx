@@ -18,26 +18,28 @@ const NumberInput = ({
   value,
   onChange,
   inputComponent,
-}) => {
-  return (
-    <>
-      <FormField
-        label={`${title} - ${Intl.NumberFormat("en-US", {
-          style: "currency",
-          currency: "USD",
-        }).format(value / 100)}`}
-        description={description || ""}
-      >
-        <input
-          type="number"
-          value={value}
-          onChange={({ target }) => onChange(createPatchFrom(target.value))}
-          ref={inputComponent}
-        />
-      </FormField>
-    </>
-  );
-};
+}) => (
+  <>
+    <FormField
+      label={`${title} - ${
+        value
+          ? Intl.NumberFormat("en-US", {
+              style: "currency",
+              currency: "USD",
+            }).format(value / 100)
+          : "Enter a price❗"
+      }`}
+      description={description || ""}
+    >
+      <input
+        type="number"
+        value={value}
+        onChange={({ target }) => onChange(createPatchFrom(target.value))}
+        ref={inputComponent}
+      />
+    </FormField>
+  </>
+);
 
 NumberInput.focus = function sanityFocus() {
   this._inputElement.focus();
