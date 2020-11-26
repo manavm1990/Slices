@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: "Slick's Slices",
-    description: "Slick's Slices",
+    // TODO: Add 'siteUrl'
+    description: "The best 🍕 place on Earth 🌎?",
     author: "@gocodefinity",
   },
   plugins: [
