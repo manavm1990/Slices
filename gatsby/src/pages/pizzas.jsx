@@ -1,22 +1,24 @@
 import PropTypes from "prop-types"
 import React from "react"
 import { graphql } from "gatsby"
+import PizzaList from "components/PizzaList"
 
-const PizzasPage = ({
-  data: {
-    pizzas: { nodes },
-  },
-}) => (
-  <p>
-    <span role="img" aria-label="pizza">
-      🍕
-    </span>
-    There are {nodes.length} 🍕s!!!
-  </p>
+const PizzasPage = (
+  // Gatsby 'magically' passes in GraphQL results as 'props'
+  {
+    data: {
+      pizzas: { nodes },
+    },
+  }
+) => (
+  // More Gatsby magic - Pre-rendering means no need to wait for loading/data, etc.
+  <PizzaList pizzaNodes={nodes} />
 )
 
 PizzasPage.propTypes = {
-  data: PropTypes.objectOf(PropTypes.object).isRequired,
+  data: PropTypes.exact({
+    pizzas: PropTypes.exact({ nodes: PropTypes.arrayOf(PropTypes.object) }),
+  }).isRequired,
 }
 
 export default PizzasPage
