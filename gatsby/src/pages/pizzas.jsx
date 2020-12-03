@@ -16,7 +16,7 @@ const PizzasPage = ({
 )
 
 PizzasPage.propTypes = {
-  data: PropTypes.shape({ pizzas: PropTypes.shape }).isRequired,
+  data: PropTypes.objectOf(PropTypes.object).isRequired,
 }
 
 export default PizzasPage
@@ -37,7 +37,7 @@ export const pageQuery = graphql`
         image {
           asset {
             fluid(maxWidth: 400) {
-              # Courtesy of Gatsby for 'everything'
+              # GraphQL Fragment for (base64, asseturl, src, etc.) - all the things that we typically need.
               ...GatsbySanityImageFluid
             }
           }
