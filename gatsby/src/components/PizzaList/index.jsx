@@ -4,14 +4,33 @@ import Pizza from "./Pizza"
 
 const PizzasList = ({ pizzaNodes: pizzas }) => (
   <ul>
-    {pizzas.map(({ id, name, slug: { current }, toppings }) => (
-      <Pizza key={id} name={name} linkTo={current} toppings={toppings} />
+    {pizzas.map(({ id, name, slug: { current }, toppings, image }) => (
+      <Pizza
+        key={id}
+        name={name}
+        linkTo={current}
+        toppings={toppings}
+        image={image}
+      />
     ))}
   </ul>
 )
 
 PizzasList.propTypes = {
-  pizzaNodes: PropTypes.arrayOf(PropTypes.object).isRequired,
+  pizzaNodes: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      slug: PropTypes.string,
+      toppings: PropTypes.arrayOf(
+        PropTypes.exact({ id: PropTypes.string, name: PropTypes.string })
+      ),
+      image: PropTypes.exact({
+        asset: PropTypes.exact({
+          fluid: PropTypes.exact({ src: PropTypes.string }),
+        }),
+      }),
+    })
+  ).isRequired,
 }
 
 export default PizzasList
