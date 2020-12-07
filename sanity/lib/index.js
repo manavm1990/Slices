@@ -2,9 +2,8 @@ export default {
   commonFields: [
     {
       name: "name",
-      title: "🍕 Name",
+      title: "Name",
       type: "string",
-      description: "Name of the 🍕",
     },
     {
       name: "slug",

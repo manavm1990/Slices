@@ -6,5 +6,13 @@ export default {
   title: "Slicemasters",
   type: "document",
   icon: person,
-  fields: [...lib.commonFields, { name: "bio", title: "👱🏽‍♂️ Bio", type: "text" }],
+  fields: [
+    ...lib.commonFields,
+    {
+      name: "description",
+      title: "Details",
+      type: "text",
+      description: "Tell us more about this 👱🏾‍♂️",
+    },
+  ],
 };
