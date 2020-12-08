@@ -21,13 +21,13 @@ PizzasList.propTypes = {
   pizzaNodes: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
-      slug: PropTypes.string,
+      slug: PropTypes.shape({ current: PropTypes.string }),
       toppings: PropTypes.arrayOf(
         PropTypes.exact({ id: PropTypes.string, name: PropTypes.string })
       ),
       image: PropTypes.exact({
         asset: PropTypes.exact({
-          fluid: PropTypes.exact({ src: PropTypes.string }),
+          fluid: PropTypes.object,
         }),
       }),
     })

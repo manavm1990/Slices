@@ -17,7 +17,23 @@ const PizzasPage = (
 
 PizzasPage.propTypes = {
   data: PropTypes.exact({
-    pizzas: PropTypes.exact({ nodes: PropTypes.arrayOf(PropTypes.object) }),
+    pizzas: PropTypes.exact({
+      nodes: PropTypes.arrayOf(
+        PropTypes.shape({
+          name: PropTypes.string,
+          id: PropTypes.string,
+          slug: PropTypes.shape({ current: PropTypes.string }),
+          toppings: PropTypes.arrayOf(
+            PropTypes.exact({ id: PropTypes.string, name: PropTypes.string })
+          ),
+          image: PropTypes.exact({
+            asset: PropTypes.exact({
+              fluid: PropTypes.object,
+            }),
+          }),
+        })
+      ),
+    }),
   }).isRequired,
 }
 
