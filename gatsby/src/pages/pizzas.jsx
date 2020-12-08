@@ -1,6 +1,7 @@
 import PropTypes from "prop-types"
 import React from "react"
 import { graphql } from "gatsby"
+import ToppingsFilter from "components/ToppingsFilter"
 import PizzaList from "components/PizzaList"
 
 const PizzasPage = (
@@ -11,8 +12,10 @@ const PizzasPage = (
     },
   }
 ) => (
-  // More Gatsby magic - Pre-rendering means no need to wait for loading/data, etc.
-  <PizzaList pizzaNodes={nodes} />
+  <main>
+    <ToppingsFilter />
+    <PizzaList pizzaNodes={nodes} />
+  </main>
 )
 
 PizzasPage.propTypes = {
