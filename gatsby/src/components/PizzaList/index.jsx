@@ -1,9 +1,10 @@
 import PropTypes from "prop-types"
 import React from "react"
 import Pizza from "./Pizza"
+import Styled from "./Styles"
 
 const PizzasList = ({ pizzaNodes: pizzas }) => (
-  <ul>
+  <Styled>
     {pizzas.map(({ id, name, slug: { current }, toppings, image }) => (
       <Pizza
         key={id}
@@ -13,7 +14,7 @@ const PizzasList = ({ pizzaNodes: pizzas }) => (
         image={image}
       />
     ))}
-  </ul>
+  </Styled>
 )
 
 PizzasList.propTypes = {

@@ -2,6 +2,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
+import Styled from "./Styles"
 
 const Pizza = ({
   name: pizzaName,
@@ -11,7 +12,7 @@ const Pizza = ({
     asset: { fluid },
   },
 }) => (
-  <li>
+  <Styled>
     <Link to={`/pizza/${linkTo}`}>
       <h2>
         <span className="mark">{pizzaName}</span>
@@ -22,7 +23,7 @@ const Pizza = ({
       {toppings.map(({ name }) => name).join(", ")}
     </p>
     <Img fluid={fluid} alt={pizzaName} />
-  </li>
+  </Styled>
 )
 
 export default Pizza
