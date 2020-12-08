@@ -1,9 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
-import Style from "./style"
+import Styled from "./Styles"
 
 const Nav = () => (
-  <Style>
+  <Styled>
     <ul className="center">
       <li>
         <Link to="/">Home</Link>
@@ -27,7 +27,7 @@ const Nav = () => (
         <Link to="/order">Order Ahead!</Link>
       </li>
     </ul>
-  </Style>
+  </Styled>
 )
 
 export default Nav

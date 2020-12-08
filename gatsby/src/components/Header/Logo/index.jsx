@@ -1,8 +1,8 @@
 import React from "react"
-import Style from "./style"
+import Styled from "./Styles"
 
 const Logo = () => (
-  <Style className="logo">
+  <Styled className="logo">
     <div className="inner center">
       <span className="est">EST 1994</span>
       <h1>
@@ -18,7 +18,7 @@ const Logo = () => (
         <span className="slices">slices</span>
       </h1>
     </div>
-  </Style>
+  </Styled>
 )
 
 export default Logo

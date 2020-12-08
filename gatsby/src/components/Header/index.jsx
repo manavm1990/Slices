@@ -1,13 +1,13 @@
 import React from "react"
 import Logo from "./Logo"
 import Nav from "./Nav"
-import Style from "./style"
+import Styled from "./Styles"
 
 const Header = () => (
-  <Style>
+  <Styled>
     <Logo />
     <Nav />
-  </Style>
+  </Styled>
 )
 
 export default Header
