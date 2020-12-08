@@ -16,12 +16,12 @@ const Pizza = ({
       <h2>
         <span className="mark">{pizzaName}</span>
       </h2>
-      <p>
-        {/* TODO: Consider another component */}
-        {toppings.map(({ name }) => name).join(", ")}
-      </p>
-      <Img fluid={fluid} alt={pizzaName} />
     </Link>
+    <p>
+      {/* TODO: Consider another component */}
+      {toppings.map(({ name }) => name).join(", ")}
+    </p>
+    <Img fluid={fluid} alt={pizzaName} />
   </li>
 )
 
