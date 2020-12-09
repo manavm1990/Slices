@@ -22,6 +22,7 @@ PizzasPage.propTypes = {
   data: PropTypes.exact({
     pizzas: PropTypes.exact({
       nodes: PropTypes.arrayOf(
+        // Developer's Note: We don't need to this type of 'breakdown' if we are not using these props in the component.
         PropTypes.shape({
           name: PropTypes.string,
           id: PropTypes.string,
@@ -40,8 +41,7 @@ PizzasPage.propTypes = {
   }).isRequired,
 }
 
-export default PizzasPage
-
+// ⚠️ Only from 'pages'
 export const pageQuery = graphql`
   query {
     pizzas: allSanityPizza {
@@ -67,3 +67,5 @@ export const pageQuery = graphql`
     }
   }
 `
+
+export default PizzasPage
