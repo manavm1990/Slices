@@ -20,6 +20,12 @@
         "varsIgnorePattern": "^_"
       }
     ],
-    "react/jsx-filename-extension": 1
+    "react/jsx-filename-extension": 1,
+    "react/jsx-props-no-spreading": [
+      1,
+      {
+        "exceptions": ["Layout"]
+      }
+    ]
   }
 }
