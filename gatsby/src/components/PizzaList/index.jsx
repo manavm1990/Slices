@@ -3,7 +3,7 @@ import React from "react"
 import Pizza from "./Pizza"
 import Styled from "./Styles"
 
-const PizzasList = ({ pizzaNodes: pizzas }) => (
+const PizzasList = ({ pizzas }) => (
   <Styled>
     {pizzas.map(({ id, name, slug: { current }, toppings, image }) => (
       <Pizza
@@ -18,7 +18,7 @@ const PizzasList = ({ pizzaNodes: pizzas }) => (
 )
 
 PizzasList.propTypes = {
-  pizzaNodes: PropTypes.arrayOf(
+  pizzas: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
       slug: PropTypes.shape({ current: PropTypes.string }),

@@ -14,7 +14,7 @@ const PizzasPage = (
 ) => (
   <main>
     <ToppingsFilter />
-    <PizzaList pizzaNodes={nodes} />
+    <PizzaList pizzas={nodes} />
   </main>
 )
 
