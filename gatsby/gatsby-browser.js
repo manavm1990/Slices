@@ -1,6 +1,6 @@
 const React = require("react")
 const Layout = require("components/Layout").default
 
-const wrapper = ({ element }) => <Layout>{element}</Layout>
+const wrapper = ({ element, props }) => <Layout {...props}>{element}</Layout>
 
 exports.wrapPageElement = wrapper

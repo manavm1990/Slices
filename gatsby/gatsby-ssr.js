@@ -1,7 +1,7 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/ssr-apis/
- */
+// This happens after pages generated (as opposed to loaded)
+const React = require("react")
+const Layout = require("components/Layout").default
 
-// You can delete this file if you're not using it
+const wrapper = ({ element, props }) => <Layout {...props}>{element}</Layout>
+
+exports.wrapPageElement = wrapper
