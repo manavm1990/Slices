@@ -6,22 +6,26 @@ const createPizzasPages = async ({ actions, graphql }) => {
     data: {
       allSanityPizza: { nodes: pizzas },
     },
-  } = await graphql(`
-    query {
-      allSanityPizza {
-        nodes {
-          name
-          slug {
-            current
+  } =
+    // Developer's Note: This COULD be done on page level...but then restarting too much! 🐢
+    await graphql(`
+      query {
+        allSanityPizza {
+          nodes {
+            name
+            slug {
+              current
+            }
           }
         }
       }
-    }
-  `)
+    `)
   pizzas.forEach(({ name, slug: { current } }) => {
     actions.createPage({
-      path: `pizzas/${current}`,
       component: path.resolve("./src/templates/Pizza.jsx"),
+      // Use this in the GraphQL page query as argument
+      context: { current },
+      path: `pizzas/${current}`,
     })
   })
   return pizzas
