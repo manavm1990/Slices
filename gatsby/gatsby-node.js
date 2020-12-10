@@ -1,5 +1,7 @@
+// Used to dynamically create pages
 const path = require("path")
 
+// Absolute imports
 exports.onCreateWebpackConfig = ({ _, actions }) => {
   actions.setWebpackConfig({
     resolve: {
