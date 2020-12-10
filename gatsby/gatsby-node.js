@@ -19,7 +19,10 @@ const createPizzasPages = async ({ actions, graphql }) => {
     }
   `)
   pizzas.forEach(({ name, slug: { current } }) => {
-    console.log(name, current)
+    actions.createPage({
+      path: `pizzas/${current}`,
+      component: path.resolve("./src/templates/Pizza.jsx"),
+    })
   })
   return pizzas
 }

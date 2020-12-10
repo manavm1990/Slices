@@ -13,7 +13,7 @@ const Pizza = ({
   },
 }) => (
   <Styled>
-    <Link to={`/pizza/${linkTo}`}>
+    <Link to={`/pizzas/${linkTo}`}>
       <h2>
         <span className="mark">{pizzaName}</span>
       </h2>
